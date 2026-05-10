@@ -3,79 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floristería Las Cuatro Esquinas | Regalos y Flores</title>
+    <title>Floristería Las Cuatro Esquinas</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <h1>Floristería Las Cuatro Esquinas</h1>
-        <nav>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#ofertas">Ofertas</a>
-            <a href="#ubicacion">Ubicación</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <div class="container">
+            <h1>Floristería Las Cuatro Esquinas</h1>
+            <nav>
+                <a href="#catalogo" class="btn-nav">Catálogo</a>
+                <a href="#ofertas" class="btn-nav">Ofertas</a>
+                <a href="#ubicacion" class="btn-nav">Ubicación</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <h2>Detalles que enamoran, flores que cautivan</h2>
-        <p>Expertos en obsequios para cada ocasión especial en Caracas.</p>
-    </section>
+    <main class="container">
+        <section id="catalogo">
+            <div class="product-grid">
+                
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="Imagenes/ramo-rosas.jpg" alt="Ramo de Rosas">
+                    </div>
+                    <div class="card-info">
+                        <h3>Ramo de Rosas Premium</h3>
+                        <p class="price">$45.00</p>
+                        <a href="https://wa.me/584127285837?text=Hola,%20me%20interesa%20el%20Ramo%20de%20Rosas%20Premium" class="btn-whatsapp">Pedir por WhatsApp</a>
+                    </div>
+                </div>
 
-    <!-- CATÁLOGO CON BOTONES DE WHATSAPP -->
-    <section id="catalogo" class="container">
-        <h3>Nuestro Catálogo</h3>
-        <div class="grid">
-            
-            <!-- Producto 1 -->
-            <div class="card">
-                <img src="Imagenes/RamosdeRosas.jpeg" alt="Ramo de Rosas">
-                <h4>Ramo de Rosas Rojas</h4>
-                <p>Precio: $25.00</p>
-                <!-- REEMPLAZA EL NÚMERO 584120000000 POR EL TUYO -->
-                <a href="https://wa.me/584127285837?text=Hola!%20Me%20interesa%20el%20Ramo%20de%20Rosas%20Rojas" class="btn-whatsapp" target="_blank">
-                    Pedir por WhatsApp
-                </a>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="Imagenes/arreglo-girasoles.jpg" alt="Arreglo de Girasoles">
+                    </div>
+                    <div class="card-info">
+                        <h3>Arreglo de Girasoles</h3>
+                        <p class="price">$35.00</p>
+                        <a href="https://wa.me/584127285837?text=Hola,%20me%20interesa%20el%20Arreglo%20de%20Girasoles" class="btn-whatsapp">Pedir por WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="Imagenes/caja-flores.jpg" alt="Caja de Flores">
+                    </div>
+                    <div class="card-info">
+                        <h3>Caja de Flores Mixtas</h3>
+                        <p class="price">$55.00</p>
+                        <a href="https://wa.me/584127285837?text=Hola,%20me%20interesa%20la%20Caja%20de%20Flores%20Mixtas" class="btn-whatsapp">Pedir por WhatsApp</a>
+                    </div>
+                </div>
+
             </div>
+        </section>
+    </main>
 
-            <!-- Producto 2 -->
-            <div class="card">
-                <img src="Imagenes/ArrglosdeMixtos.webp" alt="Arreglo Mixto">
-                <h4>Arreglo Primavera</h4>
-                <p>Precio: $35.00</p>
-                <a href="https://wa.me/584127285837?text=Hola!%20Quiero%20información%20sobre%20el%20Arreglo%20Primavera" class="btn-whatsapp" target="_blank">
-                    Pedir por WhatsApp
-                </a>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="card">
-                <img src="Imagenes/CajasdeRegalos.jpg" alt="Caja de Regalo">
-                <h4>Caja Sorpresa Premium</h4>
-                <p>Precio: $45.00</p>
-                <a href="https://wa.me/584127285837?text=Hola!%20Me%20gustaría%20encargar%20la%20Caja%20Sorpresa%20Premium" class="btn-whatsapp" target="_blank">
-                    Pedir por WhatsApp
-                </a>
-            </div>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Floristería Las Cuatro Esquinas - Estilo Minimalista</p>
         </div>
-    </section>
-
-    <section id="ofertas" style="background-color: #ffebee; padding: 20px; text-align: center;">
-        <h3>Ofertas del Mes</h3>
-        <p><strong>¡20% de descuento!</strong> en arreglos de aniversario cada día 6.</p>
-    </section>
-
-    <section id="ubicacion" class="container">
-        <h3>Dónde Estamos</h3>
-        <p>Dirección: Calle Principal de las Cuatro Esquinas, Ciudad Tiuna, Caracas.</p>
-    </section>
-
-    <footer id="contacto">
-        <h3>Contáctanos</h3>
-        <p>Instagram: @Floristeria4Esquinas</p>
-        <p>&copy; 2026 Floristería Las Cuatro Esquinas</p>
     </footer>
 
 </body>
