@@ -1,120 +1,134 @@
-/* Configuraciones Generales */
+/* --- CONFIGURACIÓN MINIMALISTA --- */
+:root {
+    --color-principal: #333;       /* Gris muy oscuro para elegancia */
+    --color-secundario: #888;     /* Gris suave para textos secundarios */
+    --color-acento: #25d366;      /* Verde WhatsApp sutil */
+    --fuente-elegante: 'Playfair Display', serif; /* Opcional: puedes usar una de Google Fonts */
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    background-color: #ffffff; /* Fondo blanco puro como las páginas que enviaste */
+    color: var(--color-principal);
 }
 
-/* Contenedor Principal (Hacer la página más amplia) */
 .container {
-    max-width: 1200px; /* Aumentado para que se vea más ancha */
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-/* Encabezado */
+/* --- ENCABEZADO Y MENÚ --- */
 header {
-    background-color: #fff;
-    padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #eee;
+    padding: 30px 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-/* --- BOTONES DEL MENÚ (Catálogos, Oferta, Ubicación) --- */
 nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    gap: 30px;
+    margin-top: 25px;
 }
 
+/* Estilo de botones tipo "Enviatusflores" (Minimalistas) */
 .btn-nav {
     text-decoration: none;
-    background-color: #25d366; /* Color tipo WhatsApp */
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border: none;
+    color: var(--color-principal);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    border-bottom: 1px solid transparent;
 }
 
 .btn-nav:hover {
-    background-color: #128c7e;
-    transform: translateY(-3px); /* Sobresale al pasar el mouse */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    color: var(--color-secundario);
+    border-bottom: 1px solid var(--color-secundario);
 }
 
-/* --- SECCIÓN DE PRODUCTOS (TARJETAS) --- */
+/* --- CUADRÍCULA DE PRODUCTOS --- */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+    gap: 40px; /* Más espacio entre productos para que respire */
+    margin-top: 50px;
 }
 
 .card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden; /* IMPORTANTE: Mantiene el zoom dentro de la tarjeta */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
+    background: #fff;
+    border: none; /* Eliminamos bordes para estilo minimalista */
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.card:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+/* --- EFECTO DE IMAGEN (Combinación de ambas páginas) --- */
+.card-img-container {
+    overflow: hidden;
+    border-radius: 4px; /* Bordes apenas redondeados, muy sutil */
+    background-color: #f8f8f8;
 }
 
-/* --- EFECTO DE IMAGEN QUE SE EXPANDE --- */
 .card img {
     width: 100%;
-    height: 300px; /* Altura fija para que todas sean iguales */
-    object-fit: cover; /* Asegura que la imagen se vea completa y centrada */
+    height: 350px;
+    object-fit: cover;
     display: block;
-    transition: transform 0.5s ease; /* Animación suave del zoom */
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.card img:hover {
-    transform: scale(1.15); /* Se expande un 15% */
-    cursor: pointer;
+.card:hover img {
+    transform: scale(1.08); /* Zoom elegante */
 }
 
-/* Información del producto */
+/* --- TEXTOS DE PRODUCTO --- */
 .card-info {
-    padding: 15px;
-    text-align: center;
+    padding: 20px 0;
 }
 
 .card-info h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
+    font-size: 18px;
+    margin: 10px 0 5px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
-.card-info p {
-    color: #666;
-    font-size: 0.9rem;
+.card-info .price {
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
-/* Botón de Pedir por WhatsApp */
+/* --- BOTÓN DE WHATSAPP ESTILO PROFESIONAL --- */
 .btn-whatsapp {
     display: inline-block;
-    background-color: #25d366;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border: 1px solid #000; /* Botón delineado, muy minimalista */
+    color: #000;
+    padding: 10px 25px;
     text-decoration: none;
-    margin-top: 10px;
+    font-size: 12px;
     font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 /* Footer */
 footer {
-    text-align: center;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 60px;
     padding: 40px 0;
-    color: #888;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
 }
